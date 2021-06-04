@@ -21,7 +21,6 @@ in
 
     crossOverlays = [
       (import "${path}/pkgs/top-level/static.nix")
-      overlayJpegNoStatic
     ];
   };
 }
