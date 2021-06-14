@@ -71,9 +71,9 @@ writeText "login-inner" ''
   if [ "$#" -gt 0 ]; then  # if script is not called from within nix-on-droid app
     exec /usr/bin/env "$@"
   elif [ -x "${config.user.shell}" ]; then
-    exec "${config.user.shell}"
+    exec "${config.user.shell}" -l
   else
     echo "Cannot execute shell '${config.user.shell}', falling back to bash"
-    exec /usr/bin/env bash
+    exec /usr/bin/env bash -l
   fi
 ''
