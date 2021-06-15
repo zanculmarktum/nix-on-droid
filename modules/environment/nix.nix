@@ -15,6 +15,15 @@ in
   options = {
 
     nix = {
+
+      package = mkOption {
+        type = types.package;
+        default = pkgs.nix;
+        description = ''
+          This option specifies the Nix package instance to use throughout the system.
+        '';
+      };
+
       substituters = mkOption {
         type = types.listOf types.str;
         default = [];

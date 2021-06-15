@@ -47,7 +47,7 @@ in
         pkgs.cacert
         pkgs.coreutils
         pkgs.less  # since nix tools really want a pager available, #27
-        pkgs.nix
+        config.nix.package.out
       ];
 
       path = pkgs.buildEnv {
